@@ -79,16 +79,14 @@ app.put('/api/users/:userID/events/:eventID', (req, res) => {
     event.date = req.body.date;
     event.start = req.body.start;
     event.end = req.body.end;
-    res.json(event);
+    
+    res.json(user.events);
 })
 
 // delete event
 app.delete('/api/users/:userID/events/:eventID', (req, res) => {
     const user = users.find(user => user.id == req.params.userID); 
-    const event = user.events.find(event => event.id == req.params.eventID);
-    
-    const index = user.events.indexOf(event);
-    user.events.splice(index, 1);
+    const event = user.events.filter(event => event.id != req.params.eventID);
 
     res.json(event); 
 });
