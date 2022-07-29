@@ -1,3 +1,7 @@
+:root {
+    --red-color: red;
+}
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -5,7 +9,8 @@ html, body {
 }
 
 body {
-	color: #333;
+	color: #602030;
+    background-color: #FBFBFB;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -27,37 +32,45 @@ a:visited {
 
 label {
 	display: block;
+    font-size: 1.25em;
 }
 
 input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
+	max-width: 500px;
+    color: #602030;
+    font-family: inherit;
+	font-size: 1.25em;
+    background-color: #FFE5EC;
+	padding: .5em 1em;
+    margin: 0.25em 0 1em 0;
 	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+    border: none;
+	border-radius: 10px;
 }
 
-input:disabled {
-	color: #ccc;
+input::placeholder {
+    color: #A55A6D;
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
+input:focus {
+    outline: 2px solid #FFB3C6;
+}
+.button {
+    width: 100%;
+    cursor: pointer;
+    background-color: #FFB3C6;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 -2px #FB6F92;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding: .5em 0;
+    text-align: center;
 }
 
-button:disabled {
-	color: #999;
-}
+.button:hover {background-color: hsl(345, 100%, 82%)}
 
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+.button:active {
+  background-color: hsl(345, 100%, 82%);
+  box-shadow: 0 5px 0 -2px #A55A6D;
+  transform: translateY(2px);
 }

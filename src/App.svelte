@@ -1,30 +1,26 @@
 <script>
-	export let name;
+	import Login from './components/Login.svelte';
+    import Register from './components/Register.svelte';
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<header class="logo">
+        <h1>kawaii calendar</h1>
+    </header>
+
+    <Login />
+    <Register />
+    
+    <footer>Made with ♥ by <a href="github.com/dbuzon">@dbuzon</a> </footer>
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+	
 </style>
