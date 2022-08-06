@@ -11,7 +11,7 @@
     <Login />
     <Register />
     
-    <footer>Made with ♥ by <a href="github.com/dbuzon">@dbuzon</a> </footer>
+    <footer>Made with ♥ by <a href="https://github.com/dbuzon">@dbuzon</a> </footer>
 </main>
 
 <style>
@@ -22,5 +22,10 @@
         flex-direction: column;
         align-items: center;
 	}
+
+    h1 {
+        font-family: var(--accent-font);
+        font-size: 3em;
+    }
 	
 </style>
