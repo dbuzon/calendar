@@ -22,7 +22,7 @@
 </script>
 
 <div class="card">
-    <h2 class="title">Welcome</h2>
+    <h2 class="title">Register</h2>
 
     <label for="name">Name*</label>
     <input id="name" type="text" bind:value={inputName} placeholder="Your name here" required>
@@ -47,10 +47,11 @@
     }       
 
     .title {
+        font-family: var(--accent-font);
+        font-size: 1.75em;
         text-align: center;
         margin-top: 0;
         color: #FB6F92;
-        font-weight: 800;
         line-height: 1;
     }
 
